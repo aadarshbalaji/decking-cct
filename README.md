@@ -17,6 +17,34 @@ This site is configured to work with GitHub Pages. To deploy:
 
 The `.nojekyll` file ensures GitHub Pages serves the site as static files without Jekyll processing.
 
+## Troubleshooting: Local vs GitHub Pages Differences
+
+If your site looks different on GitHub Pages compared to local:
+
+1. **Hard refresh your browser** on GitHub Pages:
+   - Chrome/Edge: `Ctrl+Shift+R` (Windows) or `Cmd+Shift+R` (Mac)
+   - Firefox: `Ctrl+F5` (Windows) or `Cmd+Shift+R` (Mac)
+   - Safari: `Cmd+Option+R`
+
+2. **Verify all files are committed and pushed**:
+   ```bash
+   git status
+   git add .
+   git commit -m "Update files"
+   git push
+   ```
+
+3. **Check file names are lowercase** (GitHub Pages is case-sensitive):
+   - `styles.css` ✅ (not `Styles.css`)
+   - `script.js` ✅ (not `Script.js`)
+   - `index.html` ✅ (not `Index.html`)
+
+4. **Wait for GitHub Pages to rebuild** (can take 1-2 minutes after push)
+
+5. **Check browser console** (F12) for 404 errors on GitHub Pages - this indicates missing files
+
+6. **Verify `.nojekyll` file exists** in the root directory
+
 ## Custom Domain Setup
 
 To use a custom domain name (e.g., `yourdomain.com`):
