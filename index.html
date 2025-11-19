@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Berkeley Consulting Collective</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="nav__brand">
+      <div class="nav__mark">BC</div>
+      <div>
+        <div class="nav__title">Berkeley Consulting Collective</div>
+        <div class="nav__subtitle">Product, Data, and Delivery</div>
+      </div>
+    </div>
+    <nav class="nav__links">
+      <a href="#projects">Work</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#process">Delivery</a>
+      <a class="pill" href="#contact">Book time</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero__copy">
+        <p class="eyebrow">Berkeley engineers who ship</p>
+        <h1>We blend business-first thinking with technical rigor to launch fast, de-risk, and deliver.</h1>
+        <p class="lede">
+          Full-stack builders with experience across data, ML, and product. We help teams validate strategy, build the system,
+          and communicate clearly while we do it.
+        </p>
+        <div class="hero__actions">
+          <a class="pill primary" href="#projects">View our work</a>
+          <a class="pill ghost" href="#contact">Schedule a call</a>
+        </div>
+        <div class="cred">
+          <span>11k+ data points analyzed for cleantech expansion</span>
+          <span>5+ ML pipelines deployed with observability</span>
+          <span>NDA-friendly Fortune 50 emerging tech strategy</span>
+        </div>
+      </div>
+      <div class="hero__panel">
+        <div class="signal">
+          <div class="signal__label">Delivery Pulse</div>
+          <div class="signal__grid">
+            <div class="chip success">On-time handoffs</div>
+            <div class="chip warned">Transparent updates</div>
+            <div class="chip">Technical deep dives</div>
+            <div class="chip">Stakeholder-ready storytelling</div>
+          </div>
+        </div>
+        <div class="badge">
+          <p>Tech stack</p>
+          <strong>Python · SQL · JS/TS · Plotly</strong>
+          <small>Modeling, dashboards, web apps, and robust data pipelines.</small>
+        </div>
+        <div class="badge">
+          <p>Industries</p>
+          <strong>Cleantech · Finance · E-commerce · Nonprofit · CPG</strong>
+          <small>We adapt quickly while protecting client confidentiality.</small>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="section__header">
+        <p class="eyebrow">Featured work</p>
+        <h2>Three fast-moving projects that combine strategy, build, and measurable impact.</h2>
+      </div>
+      <div class="projects">
+        <article class="card" data-animate>
+          <div class="card__meta">
+            <span class="tag">Fraud ML</span>
+            <span class="tag ghost">Autodesk e-commerce</span>
+          </div>
+          <h3>Fraud detection framework for a global design software platform</h3>
+          <p class="summary">
+            Reduced risk across a high-volume store by pairing behavioral data with resilient model design.
+          </p>
+          <div class="grid two">
+            <div>
+              <p class="label">Problem</p>
+              <p>High-risk transactions and limited visibility into fraudulent patterns across multiple payment flows.</p>
+            </div>
+            <div>
+              <p class="label">What we built</p>
+              <ul>
+                <li>Feature-engineered behavioral and transactional signals (Python, SQL).</li>
+                <li>Supervised + semi-supervised models with dynamic evaluation benchmarks.</li>
+                <li>Integrated scoring pipeline with observability inside the e-commerce stack.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="impact">
+            <p class="label">Impact</p>
+            <p>Flagged high-risk traffic in real time, giving the fraud team a repeatable benchmark suite and deployable pipeline.</p>
+          </div>
+        </article>
+
+        <article class="card" data-animate>
+          <div class="card__meta">
+            <span class="tag">Market Intel</span>
+            <span class="tag ghost">Antora Energy</span>
+          </div>
+          <h3>Data-driven market entry for cleantech heat batteries</h3>
+          <p class="summary">
+            Built a thermal load database and prioritization rubric to unlock $2B+ in European and APAC industrial opportunities.
+          </p>
+          <div class="grid two">
+            <div>
+              <p class="label">Problem</p>
+              <p>Identify where to expand first across 200k+ industrial records with varying data quality.</p>
+            </div>
+            <div>
+              <p class="label">What we built</p>
+              <ul>
+                <li>Aggregated EEA and Erhart datasets (300k+ rows) into a clean, filterable model.</li>
+                <li>Analyzed 8 years of energy usage across 11k facilities; narrowed to top 500 then 100 high-fit sites.</li>
+                <li>Visualized thermal load shifts to prioritize pulp, fertilizer, chemical, and paper sectors.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="impact">
+            <p class="label">Impact</p>
+            <p>Surfaced Western Australia, Victoria, and Nordics as highest-yield regions; enabled data-backed sequencing for sales and partnerships.</p>
+          </div>
+        </article>
+
+        <article class="card" data-animate>
+          <div class="card__meta">
+            <span class="tag">Emerging Tech</span>
+            <span class="tag ghost">Fortune 50 (NDA)</span>
+          </div>
+          <h3>Quantum computing and digital workplace strategy for a Fortune 50 financial services leader</h3>
+          <p class="summary">
+            Clarified where to bet on emerging tech by pairing market research with hands-on interviews and actionable pilots.
+          </p>
+          <div class="grid two">
+            <div>
+              <p class="label">Problem</p>
+              <p>Navigate hype and invest in the right quantum and digital workspace tools without disrupting core banking operations.</p>
+            </div>
+            <div>
+              <p class="label">What we built</p>
+              <ul>
+                <li>Competitive analysis across 5+ quantum platforms and 10+ adoption strategies.</li>
+                <li>Case studies on operational efficiency, risk controls, and integration pathways.</li>
+                <li>Stakeholder interviews to align internal teams on near-term pilots.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="impact">
+            <p class="label">Impact</p>
+            <p>Delivered a prioritized roadmap that improved decision-making, positioned the client for a projected 6x market expansion, and reduced adoption risk.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="capabilities" class="section alt">
+      <div class="section__header">
+        <p class="eyebrow">How we work</p>
+        <h2>Business-first consulting plus shipping-level engineering.</h2>
+      </div>
+      <div class="pillars">
+        <div class="pillar" data-animate>
+          <h3>Business understanding</h3>
+          <p>We anchor to the why: market sizing, user pain, and stakeholder constraints shape every build.</p>
+          <ul>
+            <li>Market analysis, GTM motion design, and pricing models.</li>
+            <li>Stakeholder-ready narratives that translate technical depth.</li>
+          </ul>
+        </div>
+        <div class="pillar" data-animate>
+          <h3>Technical excellence</h3>
+          <p>Engineers who own the stack end-to-end, from rapid prototypes to secure, observable systems.</p>
+          <ul>
+            <li>Data pipelines, ML modeling, dashboards, and full-stack apps.</li>
+            <li>Modern tooling: Python, SQL, JS/TS, Plotly, cloud data lakes.</li>
+          </ul>
+        </div>
+        <div class="pillar" data-animate>
+          <h3>Delivery and communication</h3>
+          <p>Fast feedback, crisp updates, and clear acceptance criteria so stakeholders always know what ships next.</p>
+          <ul>
+            <li>Weekly milestones, demos, and risk surfacing early.</li>
+            <li>Transparent decision logs and async-friendly summaries.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="section">
+      <div class="section__header">
+        <p class="eyebrow">Delivery playbook</p>
+        <h2>A tight loop from problem framing to shipped outcome.</h2>
+      </div>
+      <div class="timeline">
+        <div class="step" data-animate>
+          <div class="step__dot"></div>
+          <div>
+            <h4>01 — Frame</h4>
+            <p>Clarify goals, constraints, and success metrics. Align on the decision we are informing or the system we are shipping.</p>
+          </div>
+        </div>
+        <div class="step" data-animate>
+          <div class="step__dot"></div>
+          <div>
+            <h4>02 — Design</h4>
+            <p>Draft architecture, data model, and experiment plan. Pick the fastest path that preserves quality and observability.</p>
+          </div>
+        </div>
+        <div class="step" data-animate>
+          <div class="step__dot"></div>
+          <div>
+            <h4>03 — Build</h4>
+            <p>Implement, validate, and demo weekly. Ship documentation so the client team can operate independently.</p>
+          </div>
+        </div>
+        <div class="step" data-animate>
+          <div class="step__dot"></div>
+          <div>
+            <h4>04 — Launch</h4>
+            <p>Harden, hand off, and measure results. Smooth knowledge transfer and clear next steps to sustain momentum.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="section__header">
+        <p class="eyebrow">Proof points</p>
+        <h2>We keep things measurable.</h2>
+      </div>
+      <div class="metrics">
+        <div class="metric" data-animate>
+          <div class="metric__value">200k+</div>
+          <div class="metric__label">IRS records parsed for predictive nonprofit funding models.</div>
+        </div>
+        <div class="metric" data-animate>
+          <div class="metric__value">10+</div>
+          <div class="metric__label">Emerging tech strategies delivered to Fortune 50 leadership.</div>
+        </div>
+        <div class="metric" data-animate>
+          <div class="metric__value">8 yrs</div>
+          <div class="metric__label">Historical energy data modeled to map cleantech expansion.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="contact__panel" data-animate>
+        <p class="eyebrow">Let’s talk</p>
+        <h2>Tell us the decision you need to make or the product you need to ship.</h2>
+        <p class="lede">Two-minute intro call to align on scope, outcomes, and timeline.</p>
+        <div class="hero__actions">
+          <a class="pill primary" href="mailto:team@your-consulting.com">Email the team</a>
+          <a class="pill ghost" href="#process">See how we deliver</a>
+        </div>
+      </div>
+      <div class="contact__aside" data-animate>
+        <p class="label">What we cover on day one</p>
+        <ul>
+          <li>Context download and key risks.</li>
+          <li>Timeline, milestones, and communication preferences.</li>
+          <li>Tech stack, data access, and decision owners.</li>
+        </ul>
+        <div class="chip ghost">Avg. response time: <strong>1 business day</strong></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Berkeley Consulting Collective · Built for GitHub Pages · Always NDA-safe by default.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
