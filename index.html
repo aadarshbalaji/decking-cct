@@ -1,284 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Berkeley Consulting Collective</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cleantech Market Entry Deck — Berkeley Consulting Collective</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="nav">
-    <div class="nav__brand">
-      <div class="nav__mark">BC</div>
-      <div>
-        <div class="nav__title">Berkeley Consulting Collective</div>
-        <div class="nav__subtitle">Product, Data, and Delivery</div>
-      </div>
-    </div>
-    <nav class="nav__links">
-      <a href="#projects">Work</a>
-      <a href="#capabilities">Capabilities</a>
-      <a href="#process">Delivery</a>
-      <a class="pill" href="#contact">Book time</a>
-    </nav>
-  </header>
+  <div class="progress-bar">
+    <div class="progress-fill" id="progressBar"></div>
+  </div>
 
-  <main>
-    <section class="hero">
-      <div class="hero__copy">
-        <p class="eyebrow">Berkeley engineers who ship</p>
-        <h1>We blend business-first thinking with technical rigor to launch fast, de-risk, and deliver.</h1>
-        <p class="lede">
-          Full-stack builders with experience across data, ML, and product. We help teams validate strategy, build the system,
-          and communicate clearly while we do it.
-        </p>
-        <div class="hero__actions">
-          <a class="pill primary" href="#projects">View our work</a>
-          <a class="pill ghost" href="#contact">Schedule a call</a>
-        </div>
-        <div class="cred">
-          <span>11k+ data points analyzed for cleantech expansion</span>
-          <span>5+ ML pipelines deployed with observability</span>
-          <span>NDA-friendly Fortune 50 emerging tech strategy</span>
-        </div>
+  <button class="fullscreen-btn" id="fullscreenBtn">⛶ Fullscreen</button>
+
+  <div class="presentation-container">
+    <!-- Slide 1: Title -->
+    <section class="slide active">
+      <div class="title-slide">
+        <p class="eyebrow animate-item">Case Study · Antora Energy</p>
+        <h1 class="animate-item">Data-Driven Market Entry for Industrial Heat Batteries</h1>
+        <div class="gradient-accent animate-item"></div>
+        <p class="animate-item lead">How a Berkeley engineering team filtered 300k+ industrial records to pinpoint where to launch next.</p>
+        <p class="animate-item tagline">Berkeley Consulting Collective · Product, Data, Delivery</p>
       </div>
-      <div class="hero__panel">
-        <div class="signal">
-          <div class="signal__label">Delivery Pulse</div>
-          <div class="signal__grid">
-            <div class="chip success">On-time handoffs</div>
-            <div class="chip warned">Transparent updates</div>
-            <div class="chip">Technical deep dives</div>
-            <div class="chip">Stakeholder-ready storytelling</div>
-          </div>
+    </section>
+
+    <!-- Slide 2: Client Snapshot -->
+    <section class="slide">
+      <div class="content">
+        <h2 class="animate-item">Client Snapshot</h2>
+        <div class="card animate-item">
+          <h3>Who</h3>
+          <p>Antora Energy builds thermal batteries that store excess solar and wind energy to power industrial facilities.</p>
         </div>
-        <div class="badge">
-          <p>Tech stack</p>
-          <strong>Python · SQL · JS/TS · Plotly</strong>
-          <small>Modeling, dashboards, web apps, and robust data pipelines.</small>
-        </div>
-        <div class="badge">
-          <p>Industries</p>
-          <strong>Cleantech · Finance · E-commerce · Nonprofit · CPG</strong>
-          <small>We adapt quickly while protecting client confidentiality.</small>
+        <div class="card animate-item">
+          <h3>Goal</h3>
+          <p>Assess European and APAC market entry, using data to target the best regions and sectors for expansion.</p>
         </div>
       </div>
     </section>
 
-    <section id="projects" class="section">
-      <div class="section__header">
-        <p class="eyebrow">Featured work</p>
-        <h2>Three fast-moving projects that combine strategy, build, and measurable impact.</h2>
-      </div>
-      <div class="projects">
-        <article class="card" data-animate>
-          <div class="card__meta">
-            <span class="tag">Fraud ML</span>
-            <span class="tag ghost">Autodesk e-commerce</span>
-          </div>
-          <h3>Fraud detection framework for a global design software platform</h3>
-          <p class="summary">
-            Reduced risk across a high-volume store by pairing behavioral data with resilient model design.
-          </p>
-          <div class="grid two">
-            <div>
-              <p class="label">Problem</p>
-              <p>High-risk transactions and limited visibility into fraudulent patterns across multiple payment flows.</p>
-            </div>
-            <div>
-              <p class="label">What we built</p>
-              <ul>
-                <li>Feature-engineered behavioral and transactional signals (Python, SQL).</li>
-                <li>Supervised + semi-supervised models with dynamic evaluation benchmarks.</li>
-                <li>Integrated scoring pipeline with observability inside the e-commerce stack.</li>
-              </ul>
-            </div>
-          </div>
-          <div class="impact">
-            <p class="label">Impact</p>
-            <p>Flagged high-risk traffic in real time, giving the fraud team a repeatable benchmark suite and deployable pipeline.</p>
-          </div>
-        </article>
-
-        <article class="card" data-animate>
-          <div class="card__meta">
-            <span class="tag">Market Intel</span>
-            <span class="tag ghost">Antora Energy</span>
-          </div>
-          <h3>Data-driven market entry for cleantech heat batteries</h3>
-          <p class="summary">
-            Built a thermal load database and prioritization rubric to unlock $2B+ in European and APAC industrial opportunities.
-          </p>
-          <div class="grid two">
-            <div>
-              <p class="label">Problem</p>
-              <p>Identify where to expand first across 200k+ industrial records with varying data quality.</p>
-            </div>
-            <div>
-              <p class="label">What we built</p>
-              <ul>
-                <li>Aggregated EEA and Erhart datasets (300k+ rows) into a clean, filterable model.</li>
-                <li>Analyzed 8 years of energy usage across 11k facilities; narrowed to top 500 then 100 high-fit sites.</li>
-                <li>Visualized thermal load shifts to prioritize pulp, fertilizer, chemical, and paper sectors.</li>
-              </ul>
-            </div>
-          </div>
-          <div class="impact">
-            <p class="label">Impact</p>
-            <p>Surfaced Western Australia, Victoria, and Nordics as highest-yield regions; enabled data-backed sequencing for sales and partnerships.</p>
-          </div>
-        </article>
-
-        <article class="card" data-animate>
-          <div class="card__meta">
-            <span class="tag">Emerging Tech</span>
-            <span class="tag ghost">Fortune 50 (NDA)</span>
-          </div>
-          <h3>Quantum computing and digital workplace strategy for a Fortune 50 financial services leader</h3>
-          <p class="summary">
-            Clarified where to bet on emerging tech by pairing market research with hands-on interviews and actionable pilots.
-          </p>
-          <div class="grid two">
-            <div>
-              <p class="label">Problem</p>
-              <p>Navigate hype and invest in the right quantum and digital workspace tools without disrupting core banking operations.</p>
-            </div>
-            <div>
-              <p class="label">What we built</p>
-              <ul>
-                <li>Competitive analysis across 5+ quantum platforms and 10+ adoption strategies.</li>
-                <li>Case studies on operational efficiency, risk controls, and integration pathways.</li>
-                <li>Stakeholder interviews to align internal teams on near-term pilots.</li>
-              </ul>
-            </div>
-          </div>
-          <div class="impact">
-            <p class="label">Impact</p>
-            <p>Delivered a prioritized roadmap that improved decision-making, positioned the client for a projected 6x market expansion, and reduced adoption risk.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="capabilities" class="section alt">
-      <div class="section__header">
-        <p class="eyebrow">How we work</p>
-        <h2>Business-first consulting plus shipping-level engineering.</h2>
-      </div>
-      <div class="pillars">
-        <div class="pillar" data-animate>
-          <h3>Business understanding</h3>
-          <p>We anchor to the why: market sizing, user pain, and stakeholder constraints shape every build.</p>
-          <ul>
-            <li>Market analysis, GTM motion design, and pricing models.</li>
-            <li>Stakeholder-ready narratives that translate technical depth.</li>
-          </ul>
+    <!-- Slide 3: Problem & Stakes -->
+    <section class="slide">
+      <div class="content">
+        <h2 class="animate-item">Problem & Stakes</h2>
+        <div class="card animate-item">
+          <h3>Challenge</h3>
+          <p>Decide where to expand first across hundreds of thousands of industrial sites with uneven data quality.</p>
         </div>
-        <div class="pillar" data-animate>
-          <h3>Technical excellence</h3>
-          <p>Engineers who own the stack end-to-end, from rapid prototypes to secure, observable systems.</p>
+        <div class="card animate-item">
+          <h3>What Was Needed</h3>
           <ul>
-            <li>Data pipelines, ML modeling, dashboards, and full-stack apps.</li>
-            <li>Modern tooling: Python, SQL, JS/TS, Plotly, cloud data lakes.</li>
-          </ul>
-        </div>
-        <div class="pillar" data-animate>
-          <h3>Delivery and communication</h3>
-          <p>Fast feedback, crisp updates, and clear acceptance criteria so stakeholders always know what ships next.</p>
-          <ul>
-            <li>Weekly milestones, demos, and risk surfacing early.</li>
-            <li>Transparent decision logs and async-friendly summaries.</li>
+            <li>Consolidated, trustworthy dataset across multiple European and APAC sources.</li>
+            <li>Filterable rubric tied to thermal load and processing constraints.</li>
+            <li>Clear, defensible short list for sales and partnerships.</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <section id="process" class="section">
-      <div class="section__header">
-        <p class="eyebrow">Delivery playbook</p>
-        <h2>A tight loop from problem framing to shipped outcome.</h2>
+    <!-- Slide 4: Data Ingestion -->
+    <section class="slide">
+      <div class="content">
+        <h2 class="animate-item">Data Ingestion</h2>
+        <div class="card animate-item">
+          <h3>Sources</h3>
+          <ul>
+            <li>EEA Database (200,000+ data points).</li>
+            <li>Erhart Database (100,000+ data points).</li>
+          </ul>
+        </div>
+        <div class="card animate-item">
+          <h3>Filtering Signals</h3>
+          <ul>
+            <li>Thermal Load — how much heat an HVAC system can process and sustain.</li>
+            <li>Maximum Processing Temperature — suitability for Antora’s battery tech.</li>
+            <li>Policy and incentive relevance by region (EU deals, country legislation, tax cuts).</li>
+          </ul>
+        </div>
       </div>
-      <div class="timeline">
-        <div class="step" data-animate>
-          <div class="step__dot"></div>
-          <div>
-            <h4>01 — Frame</h4>
-            <p>Clarify goals, constraints, and success metrics. Align on the decision we are informing or the system we are shipping.</p>
+    </section>
+
+    <!-- Slide 5: Analysis & Narrowing -->
+    <section class="slide">
+      <div class="content">
+        <h2 class="animate-item">Analysis & Narrowing</h2>
+        <div class="two-column">
+          <div class="tech-card animate-item">
+            <h3>Process</h3>
+            <ul>
+              <li>Standardized 300k+ rows, focusing on thermal load and processing temperature.</li>
+              <li>Modeled 8 years of energy usage across 11,000 industrial facilities.</li>
+              <li>Weighted rubric in Excel narrowed universe from 11,000 to top 500 to a final top 100 list.</li>
+            </ul>
           </div>
-        </div>
-        <div class="step" data-animate>
-          <div class="step__dot"></div>
-          <div>
-            <h4>02 — Design</h4>
-            <p>Draft architecture, data model, and experiment plan. Pick the fastest path that preserves quality and observability.</p>
-          </div>
-        </div>
-        <div class="step" data-animate>
-          <div class="step__dot"></div>
-          <div>
-            <h4>03 — Build</h4>
-            <p>Implement, validate, and demo weekly. Ship documentation so the client team can operate independently.</p>
-          </div>
-        </div>
-        <div class="step" data-animate>
-          <div class="step__dot"></div>
-          <div>
-            <h4>04 — Launch</h4>
-            <p>Harden, hand off, and measure results. Smooth knowledge transfer and clear next steps to sustain momentum.</p>
+          <div class="tech-card animate-item">
+            <h3>Tooling</h3>
+            <ul>
+              <li>Microsoft Excel for modeling, filtering, and scoring.</li>
+              <li>Thermal load visualizations for each shortlisted facility.</li>
+              <li>Sector lens on pulp, fertilizer, chemical, and paper to focus outreach.</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section alt">
-      <div class="section__header">
-        <p class="eyebrow">Proof points</p>
-        <h2>We keep things measurable.</h2>
-      </div>
-      <div class="metrics">
-        <div class="metric" data-animate>
-          <div class="metric__value">200k+</div>
-          <div class="metric__label">IRS records parsed for predictive nonprofit funding models.</div>
+    <!-- Slide 6: Findings -->
+    <section class="slide">
+      <div class="content">
+        <h2 class="animate-item">Key Findings</h2>
+        <div class="card animate-item">
+          <h3>Regional Signals</h3>
+          <ul>
+            <li>Western Australia: 400.06 MW thermal load across shortlisted sites.</li>
+            <li>Victoria: 108.28 MW, strong follow-on region.</li>
+            <li>Germany: 305.70 MW across 9 sites — flagged for limited diversification.</li>
+          </ul>
         </div>
-        <div class="metric" data-animate>
-          <div class="metric__value">10+</div>
-          <div class="metric__label">Emerging tech strategies delivered to Fortune 50 leadership.</div>
-        </div>
-        <div class="metric" data-animate>
-          <div class="metric__value">8 yrs</div>
-          <div class="metric__label">Historical energy data modeled to map cleantech expansion.</div>
+        <div class="card animate-item">
+          <h3>Site-Level Highlights</h3>
+          <ul>
+            <li>Metsä Board (Finland): >1,000 MW thermal load, standout candidate.</li>
+            <li>SCA Östrand (Sweden): +40 MW increase over 5 years, showing rising intensity.</li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="section contact">
-      <div class="contact__panel" data-animate>
-        <p class="eyebrow">Let’s talk</p>
-        <h2>Tell us the decision you need to make or the product you need to ship.</h2>
-        <p class="lede">Two-minute intro call to align on scope, outcomes, and timeline.</p>
-        <div class="hero__actions">
-          <a class="pill primary" href="mailto:team@your-consulting.com">Email the team</a>
-          <a class="pill ghost" href="#process">See how we deliver</a>
+    <!-- Slide 7: Impact -->
+    <section class="slide">
+      <div class="content">
+        <h2 class="animate-item">Impact</h2>
+        <div class="card animate-item">
+          <h3>Outcome</h3>
+          <ul>
+            <li>Analyzed 11,000+ facilities to identify $2B+ market opportunities across Europe and Australia.</li>
+            <li>Delivered a prioritized top-100 list with supporting visuals and rubric scores.</li>
+            <li>Enabled data-backed sequencing of sales/partnership outreach by region and sector.</li>
+          </ul>
         </div>
       </div>
-      <div class="contact__aside" data-animate>
-        <p class="label">What we cover on day one</p>
-        <ul>
-          <li>Context download and key risks.</li>
-          <li>Timeline, milestones, and communication preferences.</li>
-          <li>Tech stack, data access, and decision owners.</li>
-        </ul>
-        <div class="chip ghost">Avg. response time: <strong>1 business day</strong></div>
+    </section>
+
+    <!-- Slide 8: Delivery & Communication -->
+    <section class="slide">
+      <div class="content">
+        <h2 class="animate-item">Delivery & Communication</h2>
+        <div class="two-column">
+          <div class="tech-card animate-item">
+            <h3>Cadence</h3>
+            <ul>
+              <li>Weekly milestones with demos of updated dashboards and rubrics.</li>
+              <li>Risk surfacing early when data gaps appeared; captured decisions in short memos.</li>
+            </ul>
+          </div>
+          <div class="tech-card animate-item">
+            <h3>Artifacts</h3>
+            <ul>
+              <li>Filterable Excel workbook with scoring logic documented inline.</li>
+              <li>Thermal load charts per site to support exec briefings.</li>
+              <li>Region playbooks summarizing incentives and constraints.</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
-  </main>
 
-  <footer class="footer">
-    <p>Berkeley Consulting Collective · Built for GitHub Pages · Always NDA-safe by default.</p>
-  </footer>
+    <!-- Slide 9: Next Steps -->
+    <section class="slide">
+      <div class="content">
+        <h2 class="animate-item">How We Can Help Next</h2>
+        <div class="card animate-item">
+          <h3>For Antora or Similar Teams</h3>
+          <ul>
+            <li>Instrument data pipelines to refresh the rubric as new facility data arrives.</li>
+            <li>Layer lead scoring into CRM for go-to-market teams.</li>
+            <li>Expand regional scans to North America and emerging markets.</li>
+          </ul>
+        </div>
+        <div class="card animate-item">
+          <h3>Contact</h3>
+          <p>team@your-consulting.com · Berkeley Consulting Collective</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="nav-controls">
+    <button class="nav-btn" id="prevBtn">← Previous</button>
+    <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">9</span></span>
+    <button class="nav-btn" id="nextBtn">Next →</button>
+  </div>
+
+  <div class="help-text">
+    Use arrow keys or spacebar · Press F for fullscreen
+  </div>
 
   <script src="script.js"></script>
 </body>
