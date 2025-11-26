@@ -16,6 +16,21 @@ document.addEventListener("DOMContentLoaded", () => {
       slide.classList.remove("active", "prev");
       if (idx === current) {
         slide.classList.add("active");
+        // Reset and restart graph animations
+        const graphNodes = slide.querySelectorAll('.animate-node');
+        const graphLines = slide.querySelectorAll('.animate-line');
+        graphNodes.forEach(node => {
+          node.style.animation = 'none';
+          setTimeout(() => {
+            node.style.animation = null;
+          }, 10);
+        });
+        graphLines.forEach(line => {
+          line.style.animation = 'none';
+          setTimeout(() => {
+            line.style.animation = null;
+          }, 10);
+        });
       } else if (idx < current) {
         slide.classList.add("prev");
       }
@@ -74,6 +89,77 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   fullscreenBtn.addEventListener("click", toggleFullscreen);
+
+  // Enhanced tooltip functionality for SVG elements
+  const graphNodeGroups = document.querySelectorAll('.graph-node-group');
+  
+  graphNodeGroups.forEach(group => {
+    let tooltip = null;
+    
+    group.addEventListener('mouseenter', (e) => {
+      const tooltipText = group.getAttribute('data-tooltip');
+      if (!tooltipText) return;
+      
+      // Create tooltip element
+      tooltip = document.createElement('div');
+      tooltip.className = 'svg-tooltip';
+      tooltip.textContent = tooltipText;
+      document.body.appendChild(tooltip);
+      
+      // Position tooltip
+      const rect = group.getBoundingClientRect();
+      const svgRect = group.closest('svg').getBoundingClientRect();
+      const tooltipRect = tooltip.getBoundingClientRect();
+      
+      tooltip.style.left = `${rect.left + rect.width / 2 - tooltipRect.width / 2}px`;
+      tooltip.style.top = `${rect.top - tooltipRect.height - 12}px`;
+      
+      requestAnimationFrame(() => {
+        tooltip.style.opacity = '1';
+        tooltip.style.transform = 'translateY(0)';
+      });
+    });
+    
+    group.addEventListener('mouseleave', () => {
+      if (tooltip) {
+        tooltip.style.opacity = '0';
+        tooltip.style.transform = 'translateY(-8px)';
+        setTimeout(() => {
+          if (tooltip && tooltip.parentNode) {
+            tooltip.parentNode.removeChild(tooltip);
+          }
+          tooltip = null;
+        }, 200);
+      }
+    });
+    
+    group.addEventListener('mousemove', (e) => {
+      if (tooltip) {
+        const rect = group.getBoundingClientRect();
+        const tooltipRect = tooltip.getBoundingClientRect();
+        tooltip.style.left = `${rect.left + rect.width / 2 - tooltipRect.width / 2}px`;
+        tooltip.style.top = `${rect.top - tooltipRect.height - 12}px`;
+      }
+    });
+  });
+
+  // Highlight related graph lines on hover
+  const graphLines = document.querySelectorAll('.graph-line');
+  const graphNodes = document.querySelectorAll('.graph-node-group');
+  
+  graphNodes.forEach(node => {
+    node.addEventListener('mouseenter', () => {
+      graphLines.forEach(line => {
+        line.style.strokeOpacity = '0.3';
+      });
+    });
+    
+    node.addEventListener('mouseleave', () => {
+      graphLines.forEach(line => {
+        line.style.strokeOpacity = '0.6';
+      });
+    });
+  });
 
   update();
 });
