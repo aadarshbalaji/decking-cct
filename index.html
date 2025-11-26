@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,6 +10,7 @@
   <title>Cleantech Market Entry Deck — Berkeley Consulting Collective</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
   <div class="progress-bar">
     <div class="progress-fill" id="progressBar"></div>
@@ -17,175 +19,310 @@
   <button class="fullscreen-btn" id="fullscreenBtn">⛶ Fullscreen</button>
 
   <div class="presentation-container">
-    <!-- Slide 1: Title -->
+    <!-- Slide 1: Intro -->
     <section class="slide active">
       <div class="title-slide">
-        <p class="eyebrow animate-item">Case Study · Antora Energy</p>
-        <h1 class="animate-item">Data-Driven Market Entry for Industrial Heat Batteries</h1>
+        <p class="eyebrow animate-item">Who We Are</p>
+        <h1 class="animate-item">Berkeley Consulting Collective</h1>
         <div class="gradient-accent animate-item"></div>
-        <p class="animate-item lead">How a Berkeley engineering team filtered 300k+ industrial records to pinpoint where to launch next.</p>
-        <p class="animate-item tagline">Berkeley Consulting Collective · Product, Data, Delivery</p>
+        <p class="animate-item lead">A team of UC Berkeley computer science and EECS students who will be working to
+          implement your technical solutions.</p>
+        <p class="animate-item tagline">We’ve worked on projects in the past for a wide range of clients, mainly working
+          addressing technical problems for their engineering team.</p>
       </div>
     </section>
 
-    <!-- Slide 2: Client Snapshot -->
+    <!-- Slide 2: Netflix - Problem -->
     <section class="slide">
+      <img src="assets/netflix-logo.png" class="slide-logo netflix-logo" alt="Netflix Logo">
       <div class="content">
-        <h2 class="animate-item">Client Snapshot</h2>
+        <h2 class="animate-item">Netflix: Problem</h2>
         <div class="card animate-item">
-          <h3>Who</h3>
-          <p>Antora Energy builds thermal batteries that store excess solar and wind energy to power industrial facilities.</p>
-        </div>
-        <div class="card animate-item">
-          <h3>Goal</h3>
-          <p>Assess European and APAC market entry, using data to target the best regions and sectors for expansion.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Slide 3: Problem & Stakes -->
-    <section class="slide">
-      <div class="content">
-        <h2 class="animate-item">Problem & Stakes</h2>
-        <div class="card animate-item">
-          <h3>Challenge</h3>
-          <p>Decide where to expand first across hundreds of thousands of industrial sites with uneven data quality.</p>
-        </div>
-        <div class="card animate-item">
-          <h3>What Was Needed</h3>
+          <h3>Business Context</h3>
           <ul>
-            <li>Consolidated, trustworthy dataset across multiple European and APAC sources.</li>
-            <li>Filterable rubric tied to thermal load and processing constraints.</li>
-            <li>Clear, defensible short list for sales and partnerships.</li>
+            <li>Netflix wanted to expand beyond passive streaming into <strong>interactive, choice-based storytelling
+                experiences</strong> (e.g., <em>Bandersnatch</em>).</li>
+            <li>They needed a way to <strong>design, visualize, and validate deep narrative branches</strong> at
+              scale—thousands of possible storylines, decisions, and endings.</li>
+          </ul>
+        </div>
+        <div class="card animate-item">
+          <h3>Key Challenges</h3>
+          <ul>
+            <li><strong>Narrative explosion problem:</strong> As choices multiply, storyline branches become complex,
+              hard to track, and nearly impossible to test manually.</li>
+            <li>No internal tool to <strong>automatically generate, analyze, or visualize branching story
+                paths</strong>.</li>
+            <li>Existing tools like Mermaid were <strong>not scalable</strong> — text-heavy, overloaded, poor zoom,
+              unclear hierarchy, difficult for writers and product teams.</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- Slide 4: Data Ingestion -->
+    <!-- Slide 3: Netflix - Solution -->
     <section class="slide">
+      <img src="assets/netflix-logo.png" class="slide-logo netflix-logo" alt="Netflix Logo">
       <div class="content">
-        <h2 class="animate-item">Data Ingestion</h2>
-        <div class="card animate-item">
-          <h3>Sources</h3>
-          <ul>
-            <li>EEA Database (200,000+ data points).</li>
-            <li>Erhart Database (100,000+ data points).</li>
-          </ul>
-        </div>
-        <div class="card animate-item">
-          <h3>Filtering Signals</h3>
-          <ul>
-            <li>Thermal Load — how much heat an HVAC system can process and sustain.</li>
-            <li>Maximum Processing Temperature — suitability for Antora’s battery tech.</li>
-            <li>Policy and incentive relevance by region (EU deals, country legislation, tax cuts).</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Slide 5: Analysis & Narrowing -->
-    <section class="slide">
-      <div class="content">
-        <h2 class="animate-item">Analysis & Narrowing</h2>
+        <h2 class="animate-item">Our Solution: Intelligent Story Graph Generator</h2>
         <div class="two-column">
           <div class="tech-card animate-item">
-            <h3>Process</h3>
+            <h3>What We Built</h3>
             <ul>
-              <li>Standardized 300k+ rows, focusing on thermal load and processing temperature.</li>
-              <li>Modeled 8 years of energy usage across 11,000 industrial facilities.</li>
-              <li>Weighted rubric in Excel narrowed universe from 11,000 to top 500 to a final top 100 list.</li>
+              <li>Developed an AI-assisted system to <strong>generate narrative graphs</strong> from story scripts.</li>
+              <li>Parsed interactive story content into structured nodes: <strong>choices, outcomes, character states,
+                  and dependencies</strong>.</li>
+              <li>Built a <strong>graph visualization engine using Plotly</strong> to handle deep, wide branching
+                structures with interactive filtering, zooming, and tooltips.</li>
             </ul>
           </div>
           <div class="tech-card animate-item">
-            <h3>Tooling</h3>
+            <h3>Key Features</h3>
             <ul>
-              <li>Microsoft Excel for modeling, filtering, and scoring.</li>
-              <li>Thermal load visualizations for each shortlisted facility.</li>
-              <li>Sector lens on pulp, fertilizer, chemical, and paper to focus outreach.</li>
+              <li>Story node generation (choices, events, endings)</li>
+              <li>Auto-validation of loops, dead ends, and logical inconsistencies</li>
+              <li>Interactive, scalable visualization (Depth 4 → Depth 8 → Depth 12 graphs)</li>
+              <li>Better UI for writers and designers to collaborate.</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Slide 6: Findings -->
+    <!-- Slide 4: Netflix - Diagrams -->
     <section class="slide">
+      <img src="assets/netflix-logo.png" class="slide-logo netflix-logo" alt="Netflix Logo">
       <div class="content">
-        <h2 class="animate-item">Key Findings</h2>
+        <h2 class="animate-item">System Architecture & Visualization</h2>
+        <div class="card animate-item"
+          style="display: flex; gap: 30px; justify-content: center; align-items: center; padding: 40px;">
+          <img src="assets/netflix-diagram-1.png" alt="Netflix Architecture Diagram"
+            style="max-width: 48%; max-height: 500px; object-fit: contain; border-radius: 8px; border: 1px solid var(--border);">
+          <img src="assets/netflix-diagram-2.png" alt="Netflix Graph Visualization"
+            style="max-width: 48%; max-height: 500px; object-fit: contain; border-radius: 8px; border: 1px solid var(--border);">
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 5: Netflix - Business Value -->
+    <section class="slide">
+      <img src="assets/netflix-logo.png" class="slide-logo netflix-logo" alt="Netflix Logo">
+      <div class="content">
+        <h2 class="animate-item">Business Value Delivered</h2>
         <div class="card animate-item">
-          <h3>Regional Signals</h3>
+          <h3>Impact for Netflix Teams</h3>
           <ul>
-            <li>Western Australia: 400.06 MW thermal load across shortlisted sites.</li>
-            <li>Victoria: 108.28 MW, strong follow-on region.</li>
-            <li>Germany: 305.70 MW across 9 sites — flagged for limited diversification.</li>
+            <li>Allowed Netflix writers, narrative designers, and product teams to <strong>instantly understand story
+                complexity visually</strong>, not just in scripts.</li>
+            <li>Reduced <strong>manual testing time by 60%</strong> (dead-end detection, branch validation, logic flow).
+            </li>
+            <li>Enabled easier <strong>A/B testing of user decisions</strong> and viewer engagement simulations.</li>
+            <li>Paved the way for <strong>dynamic story generation</strong> powered by user data, personalization, and
+              AI-generated story variations.</li>
           </ul>
         </div>
         <div class="card animate-item">
-          <h3>Site-Level Highlights</h3>
+          <h3>Strategic Outcome</h3>
+          <p>Helped Netflix scale interactive storytelling experiences—moving from one-off experiments to
+            <strong>repeatable, scalable content production</strong>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 6: Autodesk - Problem -->
+    <section class="slide">
+      <img src="assets/autodesk-logo.png" class="slide-logo autodesk-logo" alt="Autodesk Logo">
+      <div class="content">
+        <h2 class="animate-item">Autodesk: Problem</h2>
+        <div class="card animate-item">
+          <h3>Business Context</h3>
           <ul>
-            <li>Metsä Board (Finland): >1,000 MW thermal load, standout candidate.</li>
-            <li>SCA Östrand (Sweden): +40 MW increase over 5 years, showing rising intensity.</li>
+            <li>Autodesk’s e-commerce platform was struggling to <strong>detect evolving fraud patterns</strong> for
+              digital software purchases (subscriptions, renewals, bundled licenses).</li>
+            <li><strong>Static rule-based fraud filters</strong> were brittle — fraudsters easily bypassed them using
+              new devices, IP masks, and reused compromised cards.</li>
+          </ul>
+        </div>
+        <div class="card animate-item">
+          <h3>Key Challenges</h3>
+          <ul>
+            <li><strong>Rising Losses:</strong> Fraud-related losses and chargeback rates increased, especially in
+              regions with reseller abuse.</li>
+            <li><strong>Operational Bottleneck:</strong> High number of manual review cases slowed down checkout and
+              hurt conversion.</li>
+            <li><strong>Disjointed Signals:</strong> No unified system to combine behavioral, transactional, and
+              device-level signals for real-time decisions.</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- Slide 7: Impact -->
+    <!-- Slide 7: Autodesk - Solution -->
     <section class="slide">
+      <img src="assets/autodesk-logo.png" class="slide-logo autodesk-logo" alt="Autodesk Logo">
       <div class="content">
-        <h2 class="animate-item">Impact</h2>
-        <div class="card animate-item">
-          <h3>Outcome</h3>
-          <ul>
-            <li>Analyzed 11,000+ facilities to identify $2B+ market opportunities across Europe and Australia.</li>
-            <li>Delivered a prioritized top-100 list with supporting visuals and rubric scores.</li>
-            <li>Enabled data-backed sequencing of sales/partnership outreach by region and sector.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Slide 8: Delivery & Communication -->
-    <section class="slide">
-      <div class="content">
-        <h2 class="animate-item">Delivery & Communication</h2>
+        <h2 class="animate-item">Our Solution: ML-Powered Fraud Detection</h2>
         <div class="two-column">
           <div class="tech-card animate-item">
-            <h3>Cadence</h3>
+            <h3>What We Built</h3>
             <ul>
-              <li>Weekly milestones with demos of updated dashboards and rubrics.</li>
-              <li>Risk surfacing early when data gaps appeared; captured decisions in short memos.</li>
+              <li>Designed an <strong>ML-powered fraud detection system</strong> with real-time scoring.</li>
+              <li><strong>Feature Engineering:</strong> Built 60+ features across velocity, identity trust, account
+                history, and transaction context.</li>
+              <li><strong>Real-time Integration:</strong> Exposed as REST API microservice with <strong>&lt;150ms
+                  latency</strong> at checkout.</li>
             </ul>
           </div>
           <div class="tech-card animate-item">
-            <h3>Artifacts</h3>
+            <h3>Model Architecture</h3>
             <ul>
-              <li>Filterable Excel workbook with scoring logic documented inline.</li>
-              <li>Thermal load charts per site to support exec briefings.</li>
-              <li>Region playbooks summarizing incentives and constraints.</li>
+              <li><strong>Supervised Model (XGBoost):</strong> Trained on labeled fraud/legit data to catch known
+                patterns.</li>
+              <li><strong>Anomaly Detector (Isolation Forest):</strong> Semi-supervised model to catch unseen/evolving
+                fraud patterns.</li>
+              <li><strong>Ensemble Risk Score:</strong> Combines probability + anomaly scores for a final decision.</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Slide 9: Next Steps -->
+    <!-- Slide 8: Autodesk - Architecture -->
     <section class="slide">
+      <img src="assets/autodesk-logo.png" class="slide-logo autodesk-logo" alt="Autodesk Logo">
       <div class="content">
-        <h2 class="animate-item">How We Can Help Next</h2>
+        <h2 class="animate-item">System Architecture</h2>
+        <div class="card animate-item"
+          style="display: flex; justify-content: center; align-items: center; padding: 40px;">
+          <img src="assets/autodesk-architecture.png" alt="Autodesk Fraud Detection Architecture"
+            style="max-width: 90%; max-height: 550px; object-fit: contain; border-radius: 8px; border: 1px solid var(--border);">
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 9: Autodesk - Business Value -->
+    <section class="slide">
+      <img src="assets/autodesk-logo.png" class="slide-logo autodesk-logo" alt="Autodesk Logo">
+      <div class="content">
+        <h2 class="animate-item">Business Value Delivered</h2>
         <div class="card animate-item">
-          <h3>For Antora or Similar Teams</h3>
+          <h3>Impact</h3>
           <ul>
-            <li>Instrument data pipelines to refresh the rubric as new facility data arrives.</li>
-            <li>Layer lead scoring into CRM for go-to-market teams.</li>
-            <li>Expand regional scans to North America and emerging markets.</li>
+            <li><strong>Reduced chargeback losses by over 40%</strong> through adaptive ML risk scoring.</li>
+            <li><strong>Cut manual review workloads in half</strong>, allowing analysts to focus on high-confidence
+              cases.</li>
+            <li><strong>Improved checkout conversion by 3–4%</strong> by instantly approving low-risk customers.</li>
           </ul>
         </div>
         <div class="card animate-item">
-          <h3>Contact</h3>
-          <p>team@your-consulting.com · Berkeley Consulting Collective</p>
+          <h3>Strategic Outcome</h3>
+          <p>Enabled Autodesk to move from basic rules to a <strong>scalable fraud risk platform</strong> supporting
+            multiple products and regions, laying the foundation for broader Trust and Safety infrastructure.</p>
         </div>
+      </div>
+    </section>
+
+    <!-- Slide 10: Meta - Problem -->
+    <section class="slide">
+      <img src="assets/meta-logo.png" class="slide-logo meta-logo" alt="Meta Logo">
+      <div class="content">
+        <h2 class="animate-item">Meta: Problem</h2>
+        <div class="card animate-item">
+          <h3>Business Context</h3>
+          <ul>
+            <li>Meta needed to improve <strong>scene-change detection</strong> for long-form video content (Reels,
+              Watch, Ads).</li>
+            <li>Existing pipeline struggled with <strong>latency and compute efficiency</strong> at scale.</li>
+          </ul>
+        </div>
+        <div class="card animate-item">
+          <h3>Key Challenges</h3>
+          <ul>
+            <li><strong>Infrastructure Constraints:</strong> Traditional CV methods were <strong>not optimized for
+                ARM-based infrastructure</strong> targeted for edge deployment.</li>
+            <li><strong>Performance Bottlenecks:</strong> Lacked an efficient feature extraction and inference framework
+              for high-throughput video segmentation.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 11: Meta - Solution -->
+    <section class="slide">
+      <img src="assets/meta-logo.png" class="slide-logo meta-logo" alt="Meta Logo">
+      <div class="content">
+        <h2 class="animate-item">Our Solution: Hybrid Scene Detection</h2>
+        <div class="two-column">
+          <div class="tech-card animate-item">
+            <h3>What We Built</h3>
+            <ul>
+              <li>Redesigned the system for <strong>speed, accuracy, and hardware optimization</strong>.</li>
+              <li>Developed a <strong>hybrid statistics + ML model</strong> combining histogram variance, edge
+                detection, and CNN-based shot boundary detection.</li>
+              <li>Built a <strong>streaming inference pipeline</strong> for chunk-based processing.</li>
+            </ul>
+          </div>
+          <div class="tech-card animate-item">
+            <h3>Key Optimizations</h3>
+            <ul>
+              <li><strong>ARM Optimization:</strong> Quantized TensorFlow Lite/PyTorch models with NEON vectorization.
+              </li>
+              <li><strong>Efficiency:</strong> Minimized memory footprint and enabled parallel processing.</li>
+              <li><strong>Integration:</strong> Real-time segmentation and metadata tagging for Meta's publishing
+                system.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 12: Meta - Architecture -->
+    <section class="slide">
+      <img src="assets/meta-logo.png" class="slide-logo meta-logo" alt="Meta Logo">
+      <div class="content">
+        <h2 class="animate-item">System Architecture</h2>
+        <div class="card animate-item"
+          style="display: flex; justify-content: center; align-items: center; padding: 40px;">
+          <img src="assets/meta-architecture.png" alt="Meta Video Processing Architecture"
+            style="max-width: 90%; max-height: 550px; object-fit: contain; border-radius: 8px; border: 1px solid var(--border);">
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 13: Meta - Business Value -->
+    <section class="slide">
+      <img src="assets/meta-logo.png" class="slide-logo meta-logo" alt="Meta Logo">
+      <div class="content">
+        <h2 class="animate-item">Business Value Delivered</h2>
+        <div class="card animate-item">
+          <h3>Impact</h3>
+          <ul>
+            <li>Achieved <strong>2.7× faster video processing speed</strong> on ARM-based infrastructure.</li>
+            <li>Reduced scene-detection compute costs by <strong>38%</strong> due to quantization and batch
+              optimization.</li>
+            <li>Enabled <strong>real-time content segmentation</strong> for Ads, Reels, and content moderation.</li>
+          </ul>
+        </div>
+        <div class="card animate-item">
+          <h3>Strategic Outcome</h3>
+          <p>Directly supported Meta’s <strong>video personalization and ad-placement initiatives</strong> by enabling
+            efficient, scalable video analysis.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 14: Contact -->
+    <section class="slide">
+      <div class="title-slide">
+        <p class="eyebrow animate-item">Contact Us</p>
+        <h1 class="animate-item">Let's Work Together</h1>
+        <div class="gradient-accent animate-item"></div>
+        <p class="animate-item lead">Reach out to us to discuss how we can help your engineering team.</p>
+        <p class="animate-item tagline">
+          <a href="mailto:aadarsh.balaji@gmail.com"
+            style="color: inherit; text-decoration: underline; text-underline-offset: 4px;">aadarsh.balaji@gmail.com</a>
+        </p>
       </div>
     </section>
   </div>
@@ -202,4 +339,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>
