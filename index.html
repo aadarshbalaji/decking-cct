@@ -24,10 +24,12 @@
       <div class="slide-content title-slide">
         <div class="slide-number">01</div>
         <p class="eyebrow animate-item">Who We Are</p>
-        <h1 class="animate-item">Berkeley Consulting Collective</h1>
+        <h1 class="animate-item">Client Proposal Portfolio</h1>
         <div class="gradient-accent animate-item"></div>
-        <p class="animate-item lead">A team of UC Berkeley computer science and EECS students who will be working to implement your technical solutions.</p>
-        <p class="animate-item tagline">We've worked on projects for a wide range of clients, primarily addressing technical problems for their engineering teams.</p>
+        <p class="animate-item lead">A team of UC Berkeley computer science and EECS students who will be working to
+          implement your technical solutions.</p>
+        <p class="animate-item tagline">We've worked on projects for a wide range of clients, primarily addressing
+          technical problems for their engineering teams.</p>
       </div>
     </section>
 
@@ -36,27 +38,32 @@
       <div class="slide-content">
         <div class="slide-header">
           <div class="slide-number">02</div>
-          <img src="assets/netflix-logo.png" class="client-logo" alt="Netflix Logo">
+          <img src="assets/netflix-logo.png" class="client-logo netflix-logo" alt="Netflix Logo">
         </div>
         <div class="content-wrapper">
           <h2 class="animate-item slide-title">The Challenge</h2>
           <div class="slide-body">
             <div class="content-card animate-item">
               <div class="card-icon">📊</div>
-          <h3>Business Context</h3>
-          <ul>
-                <li>Netflix wanted to expand beyond passive streaming into <strong>interactive, choice-based storytelling experiences</strong> (e.g., <em>Bandersnatch</em>).</li>
-                <li>They needed a way to <strong>design, visualize, and validate deep narrative branches</strong> at scale—thousands of possible storylines, decisions, and endings.</li>
-          </ul>
-        </div>
+              <h3>Business Context</h3>
+              <ul>
+                <li>Netflix wanted to expand beyond passive streaming into <strong>interactive, choice-based
+                    storytelling experiences</strong> (e.g., <em>Bandersnatch</em>).</li>
+                <li>They needed a way to <strong>design, visualize, and validate deep narrative branches</strong> at
+                  scale—thousands of possible storylines, decisions, and endings.</li>
+              </ul>
+            </div>
             <div class="content-card animate-item">
               <div class="card-icon">⚡</div>
-          <h3>Key Challenges</h3>
-          <ul>
-                <li><strong>Narrative explosion problem:</strong> As choices multiply, storyline branches become complex, hard to track, and nearly impossible to test manually.</li>
-                <li>No internal tool to <strong>automatically generate, analyze, or visualize branching story paths</strong>.</li>
-                <li>Existing tools like Mermaid were <strong>not scalable</strong> — text-heavy, overloaded, poor zoom, unclear hierarchy, difficult for writers and product teams.</li>
-          </ul>
+              <h3>Key Challenges</h3>
+              <ul>
+                <li><strong>Narrative explosion problem:</strong> As choices multiply, storyline branches become
+                  complex, hard to track, and nearly impossible to test manually.</li>
+                <li>No internal tool to <strong>automatically generate, analyze, or visualize branching story
+                    paths</strong>.</li>
+                <li>Existing tools like Mermaid were <strong>not scalable</strong> — text-heavy, overloaded, poor zoom,
+                  unclear hierarchy, difficult for writers and product teams.</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -68,7 +75,7 @@
       <div class="slide-content">
         <div class="slide-header">
           <div class="slide-number">03</div>
-          <img src="assets/netflix-logo.png" class="client-logo" alt="Netflix Logo">
+          <img src="assets/netflix-logo.png" class="client-logo netflix-logo" alt="Netflix Logo">
         </div>
         <div class="content-wrapper">
           <h2 class="animate-item slide-title">Our Solution</h2>
@@ -77,25 +84,28 @@
             <div class="solution-card animate-item">
               <div class="solution-header">
                 <span class="solution-number">01</span>
-            <h3>What We Built</h3>
+                <h3>What We Built</h3>
               </div>
-            <ul>
-              <li>Developed an AI-assisted system to <strong>generate narrative graphs</strong> from story scripts.</li>
-                <li>Parsed interactive story content into structured nodes: <strong>choices, outcomes, character states, and dependencies</strong>.</li>
-                <li>Built a <strong>graph visualization engine using Plotly</strong> to handle deep, wide branching structures with interactive filtering, zooming, and tooltips.</li>
-            </ul>
-          </div>
+              <ul>
+                <li>Developed an AI-assisted system to <strong>generate narrative graphs</strong> from story scripts.
+                </li>
+                <li>Parsed interactive story content into structured nodes: <strong>choices, outcomes, character states,
+                    and dependencies</strong>.</li>
+                <li>Built a <strong>graph visualization engine using Plotly</strong> to handle deep, wide branching
+                  structures with interactive filtering, zooming, and tooltips.</li>
+              </ul>
+            </div>
             <div class="solution-card animate-item">
               <div class="solution-header">
                 <span class="solution-number">02</span>
-            <h3>Key Features</h3>
+                <h3>Key Features</h3>
               </div>
-            <ul>
-              <li>Story node generation (choices, events, endings)</li>
-              <li>Auto-validation of loops, dead ends, and logical inconsistencies</li>
-              <li>Interactive, scalable visualization (Depth 4 → Depth 8 → Depth 12 graphs)</li>
-              <li>Better UI for writers and designers to collaborate.</li>
-            </ul>
+              <ul>
+                <li>Story node generation (choices, events, endings)</li>
+                <li>Auto-validation of loops, dead ends, and logical inconsistencies</li>
+                <li>Interactive, scalable visualization (Depth 4 → Depth 8 → Depth 12 graphs)</li>
+                <li>Better UI for writers and designers to collaborate.</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -107,7 +117,7 @@
       <div class="slide-content">
         <div class="slide-header">
           <div class="slide-number">04</div>
-          <img src="assets/netflix-logo.png" class="client-logo" alt="Netflix Logo">
+          <img src="assets/netflix-logo.png" class="client-logo netflix-logo" alt="Netflix Logo">
         </div>
         <div class="content-wrapper">
           <h2 class="animate-item slide-title">System Architecture</h2>
@@ -117,33 +127,40 @@
                 <div class="arch-title">System Architecture</div>
                 <div class="arch-main-flow">
                   <div class="arch-flow-row">
-                    <div class="arch-box interactive-tooltip" data-tooltip="Input story scripts containing branching narrative paths and decision points">
+                    <div class="arch-box interactive-tooltip tooltip-bottom"
+                      data-tooltip="Input story scripts containing branching narrative paths and decision points">
                       Story Scripts
                     </div>
                     <div class="arch-arrow-horizontal">→</div>
-                    <div class="arch-box highlight interactive-tooltip" data-tooltip="AI-powered parser extracts narrative nodes, choices, and dependencies from unstructured story content">
+                    <div class="arch-box highlight interactive-tooltip tooltip-bottom"
+                      data-tooltip="AI-powered parser extracts narrative nodes, choices, and dependencies from unstructured story content">
                       AI Parser
                     </div>
                   </div>
                   <div class="arch-flow-row">
-                    <div class="arch-box interactive-tooltip" data-tooltip="Builds structured graph data with nodes representing story elements and edges representing narrative flow">
+                    <div class="arch-box interactive-tooltip"
+                      data-tooltip="Builds structured graph data with nodes representing story elements and edges representing narrative flow">
                       Graph Generator
                     </div>
                     <div class="arch-arrow-horizontal">→</div>
-                    <div class="arch-box highlight interactive-tooltip" data-tooltip="Interactive visualization engine using Plotly for scalable, zoomable graph rendering with filtering capabilities">
+                    <div class="arch-box highlight interactive-tooltip"
+                      data-tooltip="Interactive visualization engine using Plotly for scalable, zoomable graph rendering with filtering capabilities">
                       Plotly Visualization
                     </div>
                   </div>
                 </div>
                 <div class="arch-separator"></div>
                 <div class="arch-components">
-                  <div class="arch-comp interactive-tooltip" data-tooltip="Automatically generates story nodes for choices, events, character states, and endings">
+                  <div class="arch-comp interactive-tooltip"
+                    data-tooltip="Automatically generates story nodes for choices, events, character states, and endings">
                     Node Generation
                   </div>
-                  <div class="arch-comp interactive-tooltip" data-tooltip="Validates narrative logic, detects loops, dead ends, and inconsistencies in story paths">
+                  <div class="arch-comp interactive-tooltip"
+                    data-tooltip="Validates narrative logic, detects loops, dead ends, and inconsistencies in story paths">
                     Validation Engine
                   </div>
-                  <div class="arch-comp interactive-tooltip" data-tooltip="User-friendly interface for writers and designers to explore and edit narrative branches">
+                  <div class="arch-comp interactive-tooltip"
+                    data-tooltip="User-friendly interface for writers and designers to explore and edit narrative branches">
                     Interactive UI
                   </div>
                 </div>
@@ -159,7 +176,7 @@
       <div class="slide-content">
         <div class="slide-header">
           <div class="slide-number">05</div>
-          <img src="assets/netflix-logo.png" class="client-logo" alt="Netflix Logo">
+          <img src="assets/netflix-logo.png" class="client-logo netflix-logo" alt="Netflix Logo">
         </div>
         <div class="content-wrapper">
           <h2 class="animate-item slide-title">Narrative Graph Visualization</h2>
@@ -170,52 +187,70 @@
                 <div class="graph-container">
                   <svg class="graph-svg" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
                     <!-- Connections first (so they appear behind nodes) -->
-                    <line x1="250" y1="80" x2="200" y2="130" stroke="#007aff" stroke-width="3" class="graph-line animate-line" data-tooltip="Narrative flow from start to choice A"/>
-                    <line x1="250" y1="80" x2="300" y2="130" stroke="#007aff" stroke-width="3" class="graph-line animate-line" data-tooltip="Narrative flow from start to choice B"/>
-                    <line x1="200" y1="160" x2="150" y2="230" stroke="#5ac8fa" stroke-width="2.5" class="graph-line animate-line" data-tooltip="Flow to event A1"/>
-                    <line x1="200" y1="160" x2="250" y2="230" stroke="#5ac8fa" stroke-width="2.5" class="graph-line animate-line" data-tooltip="Flow to event A2"/>
-                    <line x1="300" y1="160" x2="300" y2="230" stroke="#5ac8fa" stroke-width="2.5" class="graph-line animate-line" data-tooltip="Flow to event B1"/>
-                    <line x1="150" y1="260" x2="200" y2="320" stroke="#af52de" stroke-width="2.5" class="graph-line animate-line" data-tooltip="Path to ending"/>
-                    <line x1="300" y1="260" x2="350" y2="320" stroke="#af52de" stroke-width="2.5" class="graph-line animate-line" data-tooltip="Alternative path to ending"/>
-                    
+                    <line x1="250" y1="80" x2="200" y2="130" stroke="#007aff" stroke-width="3"
+                      class="graph-line animate-line" data-tooltip="Narrative flow from start to choice A" />
+                    <line x1="250" y1="80" x2="300" y2="130" stroke="#007aff" stroke-width="3"
+                      class="graph-line animate-line" data-tooltip="Narrative flow from start to choice B" />
+                    <line x1="200" y1="160" x2="150" y2="230" stroke="#5ac8fa" stroke-width="2.5"
+                      class="graph-line animate-line" data-tooltip="Flow to event A1" />
+                    <line x1="200" y1="160" x2="250" y2="230" stroke="#5ac8fa" stroke-width="2.5"
+                      class="graph-line animate-line" data-tooltip="Flow to event A2" />
+                    <line x1="300" y1="160" x2="300" y2="230" stroke="#5ac8fa" stroke-width="2.5"
+                      class="graph-line animate-line" data-tooltip="Flow to event B1" />
+                    <line x1="150" y1="260" x2="200" y2="320" stroke="#af52de" stroke-width="2.5"
+                      class="graph-line animate-line" data-tooltip="Path to ending" />
+                    <line x1="300" y1="260" x2="350" y2="320" stroke="#af52de" stroke-width="2.5"
+                      class="graph-line animate-line" data-tooltip="Alternative path to ending" />
+
                     <!-- Root node -->
-                    <g class="graph-node-group animate-node" data-tooltip="Story beginning - the entry point where narrative branches start">
-                      <circle cx="250" cy="60" r="24" fill="#007aff" class="graph-node"/>
-                      <text x="250" y="67" text-anchor="middle" fill="white" font-size="13" font-weight="600">Start</text>
+                    <g class="graph-node-group animate-node"
+                      data-tooltip="Story beginning - the entry point where narrative branches start">
+                      <circle cx="250" cy="60" r="24" fill="#007aff" class="graph-node" />
+                      <text x="250" y="67" text-anchor="middle" fill="white" font-size="13"
+                        font-weight="600">Start</text>
                     </g>
-                    
+
                     <!-- Level 1 nodes -->
-                    <g class="graph-node-group animate-node" data-tooltip="User choice point - branches based on viewer decisions (Path A)">
-                      <circle cx="200" cy="150" r="22" fill="#5ac8fa" class="graph-node"/>
+                    <g class="graph-node-group animate-node"
+                      data-tooltip="User choice point - branches based on viewer decisions (Path A)">
+                      <circle cx="200" cy="150" r="22" fill="#5ac8fa" class="graph-node" />
                       <text x="200" y="157" text-anchor="middle" fill="white" font-size="12" font-weight="600">A</text>
                     </g>
-                    <g class="graph-node-group animate-node" data-tooltip="User choice point - alternative narrative path (Path B)">
-                      <circle cx="300" cy="150" r="22" fill="#5ac8fa" class="graph-node"/>
+                    <g class="graph-node-group animate-node"
+                      data-tooltip="User choice point - alternative narrative path (Path B)">
+                      <circle cx="300" cy="150" r="22" fill="#5ac8fa" class="graph-node" />
                       <text x="300" y="157" text-anchor="middle" fill="white" font-size="12" font-weight="600">B</text>
                     </g>
-                    
+
                     <!-- Level 2 nodes -->
-                    <g class="graph-node-group animate-node" data-tooltip="Story event - consequence of Path A choice, leading to sub-branch A1">
-                      <circle cx="150" cy="250" r="20" fill="#af52de" class="graph-node"/>
+                    <g class="graph-node-group animate-node"
+                      data-tooltip="Story event - consequence of Path A choice, leading to sub-branch A1">
+                      <circle cx="150" cy="250" r="20" fill="#af52de" class="graph-node" />
                       <text x="150" y="256" text-anchor="middle" fill="white" font-size="11" font-weight="600">A1</text>
                     </g>
-                    <g class="graph-node-group animate-node" data-tooltip="Story event - alternative outcome from Path A, leading to sub-branch A2">
-                      <circle cx="250" cy="250" r="20" fill="#af52de" class="graph-node"/>
+                    <g class="graph-node-group animate-node"
+                      data-tooltip="Story event - alternative outcome from Path A, leading to sub-branch A2">
+                      <circle cx="250" cy="250" r="20" fill="#af52de" class="graph-node" />
                       <text x="250" y="256" text-anchor="middle" fill="white" font-size="11" font-weight="600">A2</text>
                     </g>
-                    <g class="graph-node-group animate-node" data-tooltip="Story event - consequence from Path B choice">
-                      <circle cx="300" cy="250" r="20" fill="#af52de" class="graph-node"/>
+                    <g class="graph-node-group animate-node"
+                      data-tooltip="Story event - consequence from Path B choice">
+                      <circle cx="300" cy="250" r="20" fill="#af52de" class="graph-node" />
                       <text x="300" y="256" text-anchor="middle" fill="white" font-size="11" font-weight="600">B1</text>
                     </g>
-                    
+
                     <!-- Level 3 nodes -->
-                    <g class="graph-node-group animate-node" data-tooltip="Story ending - final outcome reached from narrative path">
-                      <circle cx="200" cy="340" r="18" fill="#ff2d55" class="graph-node"/>
-                      <text x="200" y="346" text-anchor="middle" fill="white" font-size="10" font-weight="600">End</text>
+                    <g class="graph-node-group animate-node"
+                      data-tooltip="Story ending - final outcome reached from narrative path">
+                      <circle cx="200" cy="340" r="18" fill="#ff2d55" class="graph-node" />
+                      <text x="200" y="346" text-anchor="middle" fill="white" font-size="10"
+                        font-weight="600">End</text>
                     </g>
-                    <g class="graph-node-group animate-node" data-tooltip="Alternative story ending - different narrative conclusion">
-                      <circle cx="350" cy="340" r="18" fill="#ff2d55" class="graph-node"/>
-                      <text x="350" y="346" text-anchor="middle" fill="white" font-size="10" font-weight="600">End</text>
+                    <g class="graph-node-group animate-node"
+                      data-tooltip="Alternative story ending - different narrative conclusion">
+                      <circle cx="350" cy="340" r="18" fill="#ff2d55" class="graph-node" />
+                      <text x="350" y="346" text-anchor="middle" fill="white" font-size="10"
+                        font-weight="600">End</text>
                     </g>
                   </svg>
                 </div>
@@ -237,23 +272,29 @@
       <div class="slide-content">
         <div class="slide-header">
           <div class="slide-number">06</div>
-          <img src="assets/netflix-logo.png" class="client-logo" alt="Netflix Logo">
+          <img src="assets/netflix-logo.png" class="client-logo netflix-logo" alt="Netflix Logo">
         </div>
         <div class="content-wrapper">
           <h2 class="animate-item slide-title">Impact & Results</h2>
           <div class="impact-grid">
             <div class="impact-card animate-item">
-          <h3>Impact for Netflix Teams</h3>
-          <ul>
-                <li>Allowed Netflix writers, narrative designers, and product teams to <strong>instantly understand story complexity visually</strong>, not just in scripts.</li>
-                <li>Reduced <strong>manual testing time by 60%</strong> (dead-end detection, branch validation, logic flow).</li>
-            <li>Enabled easier <strong>A/B testing of user decisions</strong> and viewer engagement simulations.</li>
-                <li>Paved the way for <strong>dynamic story generation</strong> powered by user data, personalization, and AI-generated story variations.</li>
-          </ul>
-        </div>
+              <h3>Impact for Netflix Teams</h3>
+              <ul>
+                <li>Allowed Netflix writers, narrative designers, and product teams to <strong>instantly understand
+                    story complexity visually</strong>, not just in scripts.</li>
+                <li>Reduced <strong>manual testing time by 60%</strong> (dead-end detection, branch validation, logic
+                  flow).</li>
+                <li>Enabled easier <strong>A/B testing of user decisions</strong> and viewer engagement simulations.
+                </li>
+                <li>Paved the way for <strong>dynamic story generation</strong> powered by user data, personalization,
+                  and AI-generated story variations.</li>
+              </ul>
+            </div>
             <div class="impact-card highlight-card animate-item">
               <div class="highlight-badge">Strategic Outcome</div>
-              <p>Helped Netflix scale interactive storytelling experiences—moving from one-off experiments to <strong>repeatable, scalable content production</strong>.</p>
+              <p>Helped Netflix scale interactive storytelling experiences—moving from one-off experiments to
+                <strong>repeatable, scalable content production</strong>.
+              </p>
             </div>
           </div>
         </div>
@@ -272,20 +313,25 @@
           <div class="slide-body">
             <div class="content-card animate-item">
               <div class="card-icon">🔒</div>
-          <h3>Business Context</h3>
-          <ul>
-                <li>Autodesk's e-commerce platform was struggling to <strong>detect evolving fraud patterns</strong> for digital software purchases (subscriptions, renewals, bundled licenses).</li>
-                <li><strong>Static rule-based fraud filters</strong> were brittle — fraudsters easily bypassed them using new devices, IP masks, and reused compromised cards.</li>
-          </ul>
-        </div>
+              <h3>Business Context</h3>
+              <ul>
+                <li>Autodesk's e-commerce platform was struggling to <strong>detect evolving fraud patterns</strong> for
+                  digital software purchases (subscriptions, renewals, bundled licenses).</li>
+                <li><strong>Static rule-based fraud filters</strong> were brittle — fraudsters easily bypassed them
+                  using new devices, IP masks, and reused compromised cards.</li>
+              </ul>
+            </div>
             <div class="content-card animate-item">
               <div class="card-icon">⚡</div>
-          <h3>Key Challenges</h3>
-          <ul>
-                <li><strong>Rising Losses:</strong> Fraud-related losses and chargeback rates increased, especially in regions with reseller abuse.</li>
-                <li><strong>Operational Bottleneck:</strong> High number of manual review cases slowed down checkout and hurt conversion.</li>
-                <li><strong>Disjointed Signals:</strong> No unified system to combine behavioral, transactional, and device-level signals for real-time decisions.</li>
-          </ul>
+              <h3>Key Challenges</h3>
+              <ul>
+                <li><strong>Rising Losses:</strong> Fraud-related losses and chargeback rates increased, especially in
+                  regions with reseller abuse.</li>
+                <li><strong>Operational Bottleneck:</strong> High number of manual review cases slowed down checkout and
+                  hurt conversion.</li>
+                <li><strong>Disjointed Signals:</strong> No unified system to combine behavioral, transactional, and
+                  device-level signals for real-time decisions.</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -306,24 +352,29 @@
             <div class="solution-card animate-item">
               <div class="solution-header">
                 <span class="solution-number">01</span>
-            <h3>What We Built</h3>
+                <h3>What We Built</h3>
               </div>
-            <ul>
-              <li>Designed an <strong>ML-powered fraud detection system</strong> with real-time scoring.</li>
-                <li><strong>Feature Engineering:</strong> Built 60+ features across velocity, identity trust, account history, and transaction context.</li>
-                <li><strong>Real-time Integration:</strong> Exposed as REST API microservice with <strong>&lt;150ms latency</strong> at checkout.</li>
-            </ul>
-          </div>
+              <ul>
+                <li>Designed an <strong>ML-powered fraud detection system</strong> with real-time scoring.</li>
+                <li><strong>Feature Engineering:</strong> Built 60+ features across velocity, identity trust, account
+                  history, and transaction context.</li>
+                <li><strong>Real-time Integration:</strong> Exposed as REST API microservice with <strong>&lt;150ms
+                    latency</strong> at checkout.</li>
+              </ul>
+            </div>
             <div class="solution-card animate-item">
               <div class="solution-header">
                 <span class="solution-number">02</span>
-            <h3>Model Architecture</h3>
+                <h3>Model Architecture</h3>
               </div>
               <ul>
-                <li><strong>Supervised Model (XGBoost):</strong> Trained on labeled fraud/legit data to catch known patterns.</li>
-                <li><strong>Anomaly Detector (Isolation Forest):</strong> Semi-supervised model to catch unseen/evolving fraud patterns.</li>
-              <li><strong>Ensemble Risk Score:</strong> Combines probability + anomaly scores for a final decision.</li>
-            </ul>
+                <li><strong>Supervised Model (XGBoost):</strong> Trained on labeled fraud/legit data to catch known
+                  patterns.</li>
+                <li><strong>Anomaly Detector (Isolation Forest):</strong> Semi-supervised model to catch unseen/evolving
+                  fraud patterns.</li>
+                <li><strong>Ensemble Risk Score:</strong> Combines probability + anomaly scores for a final decision.
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -347,29 +398,43 @@
                   <div class="fraud-layer">
                     <div class="layer-title">Input Layer</div>
                     <div class="layer-boxes">
-                      <div class="fraud-box interactive-tooltip" data-tooltip="Purchase transactions, payment methods, subscription data, and billing information">Transaction Data</div>
-                      <div class="fraud-box interactive-tooltip" data-tooltip="User interaction patterns, purchase history, session data, and account activity">User Behavior</div>
-                      <div class="fraud-box interactive-tooltip" data-tooltip="Device fingerprints, IP addresses, browser characteristics, and hardware signatures">Device Signals</div>
+                      <div class="fraud-box interactive-tooltip tooltip-bottom"
+                        data-tooltip="Purchase transactions, payment methods, subscription data, and billing information">
+                        Transaction Data</div>
+                      <div class="fraud-box interactive-tooltip tooltip-bottom"
+                        data-tooltip="User interaction patterns, purchase history, session data, and account activity">
+                        User Behavior</div>
+                      <div class="fraud-box interactive-tooltip tooltip-bottom"
+                        data-tooltip="Device fingerprints, IP addresses, browser characteristics, and hardware signatures">
+                        Device Signals</div>
                     </div>
                   </div>
                   <div class="fraud-arrow-down">↓</div>
                   <div class="fraud-layer">
                     <div class="layer-title">Feature Engineering</div>
                     <div class="layer-boxes">
-                      <div class="fraud-box highlight interactive-tooltip" data-tooltip="Comprehensive feature set including velocity checks, identity verification scores, account age, transaction frequency, geographic patterns, and device trust metrics">60+ Features</div>
-                      <div class="fraud-box interactive-tooltip" data-tooltip="Measures transaction frequency, purchase velocity, account creation patterns, and activity bursts">Velocity Metrics</div>
-                      <div class="fraud-box interactive-tooltip" data-tooltip="Identity verification scores based on email reputation, phone verification, social signals, and account validation history">Identity Trust</div>
+                      <div class="fraud-box highlight interactive-tooltip"
+                        data-tooltip="Comprehensive feature set including velocity checks, identity verification scores, account age, transaction frequency, geographic patterns, and device trust metrics">
+                        60+ Features</div>
+                      <div class="fraud-box interactive-tooltip"
+                        data-tooltip="Measures transaction frequency, purchase velocity, account creation patterns, and activity bursts">
+                        Velocity Metrics</div>
+                      <div class="fraud-box interactive-tooltip"
+                        data-tooltip="Identity verification scores based on email reputation, phone verification, social signals, and account validation history">
+                        Identity Trust</div>
                     </div>
                   </div>
                   <div class="fraud-arrow-down">↓</div>
                   <div class="fraud-layer">
                     <div class="layer-title">ML Models</div>
                     <div class="ml-models">
-                      <div class="model-box interactive-tooltip" data-tooltip="Gradient boosting model trained on historical fraud patterns. Catches known fraud behaviors, card testing, account takeover, and reseller abuse">
+                      <div class="model-box interactive-tooltip"
+                        data-tooltip="Gradient boosting model trained on historical fraud patterns. Catches known fraud behaviors, card testing, account takeover, and reseller abuse">
                         <div class="model-name">XGBoost</div>
                         <div class="model-desc">Supervised</div>
                       </div>
-                      <div class="model-box interactive-tooltip" data-tooltip="Unsupervised anomaly detection model that identifies unusual patterns not seen in training data. Adapts to evolving fraud tactics">
+                      <div class="model-box interactive-tooltip"
+                        data-tooltip="Unsupervised anomaly detection model that identifies unusual patterns not seen in training data. Adapts to evolving fraud tactics">
                         <div class="model-name">Isolation Forest</div>
                         <div class="model-desc">Anomaly Detection</div>
                       </div>
@@ -379,9 +444,15 @@
                   <div class="fraud-layer">
                     <div class="layer-title">Scoring & Decision</div>
                     <div class="layer-boxes">
-                      <div class="fraud-box highlight interactive-tooltip" data-tooltip="Combines XGBoost probability scores and Isolation Forest anomaly scores into unified risk assessment (0-100 scale)">Ensemble Risk Score</div>
-                      <div class="fraud-box interactive-tooltip" data-tooltip="REST API endpoint returns approve/decline/review decision with risk score and reasoning">API Response</div>
-                      <div class="fraud-box interactive-tooltip" data-tooltip="Ultra-low latency ensures seamless checkout experience without blocking user flow">&lt;150ms Latency</div>
+                      <div class="fraud-box highlight interactive-tooltip"
+                        data-tooltip="Combines XGBoost probability scores and Isolation Forest anomaly scores into unified risk assessment (0-100 scale)">
+                        Ensemble Risk Score</div>
+                      <div class="fraud-box interactive-tooltip"
+                        data-tooltip="REST API endpoint returns approve/decline/review decision with risk score and reasoning">
+                        API Response</div>
+                      <div class="fraud-box interactive-tooltip"
+                        data-tooltip="Ultra-low latency ensures seamless checkout experience without blocking user flow">
+                        &lt;150ms Latency</div>
                     </div>
                   </div>
                 </div>
@@ -417,7 +488,8 @@
           </div>
           <div class="impact-card highlight-card animate-item">
             <div class="highlight-badge">Strategic Outcome</div>
-            <p>Enabled Autodesk to move from basic rules to a <strong>scalable fraud risk platform</strong> supporting multiple products and regions, laying the foundation for broader Trust and Safety infrastructure.</p>
+            <p>Enabled Autodesk to move from basic rules to a <strong>scalable fraud risk platform</strong> supporting
+              multiple products and regions, laying the foundation for broader Trust and Safety infrastructure.</p>
           </div>
         </div>
       </div>
@@ -428,26 +500,29 @@
       <div class="slide-content">
         <div class="slide-header">
           <div class="slide-number">11</div>
-          <img src="assets/meta-logo.png" class="client-logo" alt="Meta Logo">
+          <img src="assets/meta-logo.png" class="client-logo meta-logo" alt="Meta Logo">
         </div>
         <div class="content-wrapper">
           <h2 class="animate-item slide-title">The Challenge</h2>
           <div class="slide-body">
             <div class="content-card animate-item">
               <div class="card-icon">🎬</div>
-          <h3>Business Context</h3>
-          <ul>
-                <li>Meta needed to improve <strong>scene-change detection</strong> for long-form video content (Reels, Watch, Ads).</li>
-            <li>Existing pipeline struggled with <strong>latency and compute efficiency</strong> at scale.</li>
-          </ul>
-        </div>
+              <h3>Business Context</h3>
+              <ul>
+                <li>Meta needed to improve <strong>scene-change detection</strong> for long-form video content (Reels,
+                  Watch, Ads).</li>
+                <li>Existing pipeline struggled with <strong>latency and compute efficiency</strong> at scale.</li>
+              </ul>
+            </div>
             <div class="content-card animate-item">
               <div class="card-icon">⚡</div>
-          <h3>Key Challenges</h3>
-          <ul>
-                <li><strong>Infrastructure Constraints:</strong> Traditional CV methods were <strong>not optimized for ARM-based infrastructure</strong> targeted for edge deployment.</li>
-                <li><strong>Performance Bottlenecks:</strong> Lacked an efficient feature extraction and inference framework for high-throughput video segmentation.</li>
-          </ul>
+              <h3>Key Challenges</h3>
+              <ul>
+                <li><strong>Infrastructure Constraints:</strong> Traditional CV methods were <strong>not optimized for
+                    ARM-based infrastructure</strong> targeted for edge deployment.</li>
+                <li><strong>Performance Bottlenecks:</strong> Lacked an efficient feature extraction and inference
+                  framework for high-throughput video segmentation.</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -459,7 +534,7 @@
       <div class="slide-content">
         <div class="slide-header">
           <div class="slide-number">12</div>
-          <img src="assets/meta-logo.png" class="client-logo" alt="Meta Logo">
+          <img src="assets/meta-logo.png" class="client-logo meta-logo" alt="Meta Logo">
         </div>
         <div class="content-wrapper">
           <h2 class="animate-item slide-title">Our Solution</h2>
@@ -468,24 +543,27 @@
             <div class="solution-card animate-item">
               <div class="solution-header">
                 <span class="solution-number">01</span>
-            <h3>What We Built</h3>
+                <h3>What We Built</h3>
               </div>
-            <ul>
-              <li>Redesigned the system for <strong>speed, accuracy, and hardware optimization</strong>.</li>
-                <li>Developed a <strong>hybrid statistics + ML model</strong> combining histogram variance, edge detection, and CNN-based shot boundary detection.</li>
-              <li>Built a <strong>streaming inference pipeline</strong> for chunk-based processing.</li>
-            </ul>
-          </div>
+              <ul>
+                <li>Redesigned the system for <strong>speed, accuracy, and hardware optimization</strong>.</li>
+                <li>Developed a <strong>hybrid statistics + ML model</strong> combining histogram variance, edge
+                  detection, and CNN-based shot boundary detection.</li>
+                <li>Built a <strong>streaming inference pipeline</strong> for chunk-based processing.</li>
+              </ul>
+            </div>
             <div class="solution-card animate-item">
               <div class="solution-header">
                 <span class="solution-number">02</span>
-            <h3>Key Optimizations</h3>
+                <h3>Key Optimizations</h3>
               </div>
-            <ul>
-                <li><strong>ARM Optimization:</strong> Quantized TensorFlow Lite/PyTorch models with NEON vectorization.</li>
-              <li><strong>Efficiency:</strong> Minimized memory footprint and enabled parallel processing.</li>
-                <li><strong>Integration:</strong> Real-time segmentation and metadata tagging for Meta's publishing system.</li>
-            </ul>
+              <ul>
+                <li><strong>ARM Optimization:</strong> Quantized TensorFlow Lite/PyTorch models with NEON vectorization.
+                </li>
+                <li><strong>Efficiency:</strong> Minimized memory footprint and enabled parallel processing.</li>
+                <li><strong>Integration:</strong> Real-time segmentation and metadata tagging for Meta's publishing
+                  system.</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -497,7 +575,7 @@
       <div class="slide-content">
         <div class="slide-header">
           <div class="slide-number">13</div>
-          <img src="assets/meta-logo.png" class="client-logo" alt="Meta Logo">
+          <img src="assets/meta-logo.png" class="client-logo meta-logo" alt="Meta Logo">
         </div>
         <div class="content-wrapper">
           <h2 class="animate-item slide-title">System Architecture</h2>
@@ -506,35 +584,55 @@
               <div class="video-architecture">
                 <div class="arch-title">Video Processing Pipeline</div>
                 <div class="video-flow">
-                  <div class="video-stage interactive-tooltip" data-tooltip="Ingests long-form video content from Reels, Watch, and Ads platforms for scene analysis">
+                  <div class="video-stage">
                     <div class="stage-icon">📹</div>
-                    <div class="stage-title">Video Input</div>
+                    <div class="stage-title interactive-tooltip"
+                      data-tooltip="Ingests long-form video content from Reels, Watch, and Ads platforms for scene analysis">
+                      Video Input</div>
                     <div class="stage-desc">Long-form Content</div>
                   </div>
                   <div class="flow-arrow">→</div>
-                  <div class="video-stage highlight interactive-tooltip" data-tooltip="Multi-method scene detection combining statistical analysis with machine learning for accurate shot boundary identification">
+                  <div class="video-stage highlight">
                     <div class="stage-icon">⚙️</div>
-                    <div class="stage-title">Hybrid Detection</div>
+                    <div class="stage-title interactive-tooltip"
+                      data-tooltip="Multi-method scene detection combining statistical analysis with machine learning for accurate shot boundary identification">
+                      Hybrid Detection</div>
                     <div class="stage-details">
-                      <div class="detail-item interactive-tooltip" data-tooltip="Detects scene changes by analyzing color histogram differences between frames">Histogram Variance</div>
-                      <div class="detail-item interactive-tooltip" data-tooltip="Identifies sharp transitions using edge detection algorithms to find abrupt visual changes">Edge Detection</div>
-                      <div class="detail-item interactive-tooltip" data-tooltip="Deep learning CNN model trained to recognize shot boundaries and scene transitions">CNN Boundaries</div>
+                      <div class="detail-item interactive-tooltip"
+                        data-tooltip="Detects scene changes by analyzing color histogram differences between frames">
+                        Histogram Variance</div>
+                      <div class="detail-item interactive-tooltip"
+                        data-tooltip="Identifies sharp transitions using edge detection algorithms to find abrupt visual changes">
+                        Edge Detection</div>
+                      <div class="detail-item interactive-tooltip"
+                        data-tooltip="Deep learning CNN model trained to recognize shot boundaries and scene transitions">
+                        CNN Boundaries</div>
                     </div>
                   </div>
                   <div class="flow-arrow">→</div>
-                  <div class="video-stage interactive-tooltip" data-tooltip="Optimized for ARM-based edge infrastructure with quantized models and SIMD operations for maximum throughput">
+                  <div class="video-stage">
                     <div class="stage-icon">🚀</div>
-                    <div class="stage-title">ARM Optimization</div>
+                    <div class="stage-title interactive-tooltip"
+                      data-tooltip="Optimized for ARM-based edge infrastructure with quantized models and SIMD operations for maximum throughput">
+                      ARM Optimization</div>
                     <div class="stage-details">
-                      <div class="detail-item interactive-tooltip" data-tooltip="Reduced precision models (INT8) for faster inference with minimal accuracy loss">Quantized Models</div>
-                      <div class="detail-item interactive-tooltip" data-tooltip="NEON SIMD instructions for parallel vector operations on ARM processors">NEON Vectorization</div>
-                      <div class="detail-item interactive-tooltip" data-tooltip="Processes multiple video chunks in parallel to maximize resource utilization">Batch Processing</div>
+                      <div class="detail-item interactive-tooltip"
+                        data-tooltip="Reduced precision models (INT8) for faster inference with minimal accuracy loss">
+                        Quantized Models</div>
+                      <div class="detail-item interactive-tooltip"
+                        data-tooltip="NEON SIMD instructions for parallel vector operations on ARM processors">NEON
+                        Vectorization</div>
+                      <div class="detail-item interactive-tooltip"
+                        data-tooltip="Processes multiple video chunks in parallel to maximize resource utilization">
+                        Batch Processing</div>
                     </div>
                   </div>
                   <div class="flow-arrow">→</div>
-                  <div class="video-stage interactive-tooltip" data-tooltip="Outputs segmented video metadata with scene boundaries, timestamps, and tags for content publishing system">
+                  <div class="video-stage">
                     <div class="stage-icon">📊</div>
-                    <div class="stage-title">Output</div>
+                    <div class="stage-title interactive-tooltip"
+                      data-tooltip="Outputs segmented video metadata with scene boundaries, timestamps, and tags for content publishing system">
+                      Output</div>
                     <div class="stage-desc">Segmented Metadata</div>
                   </div>
                 </div>
@@ -554,7 +652,7 @@
       <div class="slide-content">
         <div class="slide-header">
           <div class="slide-number">14</div>
-          <img src="assets/meta-logo.png" class="client-logo" alt="Meta Logo">
+          <img src="assets/meta-logo.png" class="client-logo meta-logo" alt="Meta Logo">
         </div>
         <div class="content-wrapper">
           <h2 class="animate-item slide-title">Impact & Results</h2>
@@ -574,7 +672,8 @@
           </div>
           <div class="impact-card highlight-card animate-item">
             <div class="highlight-badge">Strategic Outcome</div>
-            <p>Directly supported Meta's <strong>video personalization and ad-placement initiatives</strong> by enabling efficient, scalable video analysis.</p>
+            <p>Directly supported Meta's <strong>video personalization and ad-placement initiatives</strong> by enabling
+              efficient, scalable video analysis.</p>
           </div>
         </div>
       </div>
@@ -589,7 +688,7 @@
         <div class="gradient-accent animate-item"></div>
         <p class="animate-item lead">We would love to work with you and engineer you long lasting solutions!</p>
         <p class="animate-item tagline">
-          <a href="mailto:aadarsh.balaji@gmail.com" class="contact-link">aadarsh.balaji@gmail.com</a>
+          <a href="mailto:aadarshbalaji@berkeley.edu" class="contact-link">aadarshbalaji@berkeley.edu</a>
         </p>
       </div>
     </section>
