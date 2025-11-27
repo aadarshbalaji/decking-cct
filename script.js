@@ -68,16 +68,37 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   let touchStartX = 0;
+  let touchStartY = 0;
   let touchEndX = 0;
+  let touchEndY = 0;
 
   document.addEventListener("touchstart", e => {
     touchStartX = e.changedTouches[0].screenX;
-  });
+    touchStartY = e.changedTouches[0].screenY;
+  }, { passive: true });
 
   document.addEventListener("touchend", e => {
     touchEndX = e.changedTouches[0].screenX;
-    if (touchEndX < touchStartX - 50) changeSlide(1);
-    if (touchEndX > touchStartX + 50) changeSlide(-1);
+    touchEndY = e.changedTouches[0].screenY;
+
+    const diffX = touchEndX - touchStartX;
+    const diffY = touchEndY - touchStartY;
+
+    // Only trigger if horizontal swipe is dominant and significant
+    if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
+      // Check if the user is scrolling a horizontal container
+      const scrollable = e.target.closest('.diagram-container');
+      if (scrollable && scrollable.scrollWidth > scrollable.clientWidth) {
+        // If scrolling right (diffX < 0) and not at end, or scrolling left (diffX > 0) and not at start
+        if ((diffX < 0 && scrollable.scrollLeft < scrollable.scrollWidth - scrollable.clientWidth) ||
+          (diffX > 0 && scrollable.scrollLeft > 0)) {
+          return;
+        }
+      }
+
+      if (diffX < 0) changeSlide(1);
+      else changeSlide(-1);
+    }
   });
 
   const toggleFullscreen = () => {
@@ -92,34 +113,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Enhanced tooltip functionality for SVG elements
   const graphNodeGroups = document.querySelectorAll('.graph-node-group');
-  
+
   graphNodeGroups.forEach(group => {
     let tooltip = null;
-    
+
     group.addEventListener('mouseenter', (e) => {
       const tooltipText = group.getAttribute('data-tooltip');
       if (!tooltipText) return;
-      
+
       // Create tooltip element
       tooltip = document.createElement('div');
       tooltip.className = 'svg-tooltip';
       tooltip.textContent = tooltipText;
       document.body.appendChild(tooltip);
-      
+
       // Position tooltip
       const rect = group.getBoundingClientRect();
       const svgRect = group.closest('svg').getBoundingClientRect();
       const tooltipRect = tooltip.getBoundingClientRect();
-      
+
       tooltip.style.left = `${rect.left + rect.width / 2 - tooltipRect.width / 2}px`;
       tooltip.style.top = `${rect.top - tooltipRect.height - 12}px`;
-      
+
       requestAnimationFrame(() => {
         tooltip.style.opacity = '1';
         tooltip.style.transform = 'translateY(0)';
       });
     });
-    
+
     group.addEventListener('mouseleave', () => {
       if (tooltip) {
         tooltip.style.opacity = '0';
@@ -132,7 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 200);
       }
     });
-    
+
     group.addEventListener('mousemove', (e) => {
       if (tooltip) {
         const rect = group.getBoundingClientRect();
@@ -146,14 +167,14 @@ document.addEventListener("DOMContentLoaded", () => {
   // Highlight related graph lines on hover
   const graphLines = document.querySelectorAll('.graph-line');
   const graphNodes = document.querySelectorAll('.graph-node-group');
-  
+
   graphNodes.forEach(node => {
     node.addEventListener('mouseenter', () => {
       graphLines.forEach(line => {
         line.style.strokeOpacity = '0.3';
       });
     });
-    
+
     node.addEventListener('mouseleave', () => {
       graphLines.forEach(line => {
         line.style.strokeOpacity = '0.6';
